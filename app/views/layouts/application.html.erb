@@ -6,23 +6,27 @@
       <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     <% end %>
     <title><%= full_title(yield(:title)) %></title>
-    <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
-    <%= render 'layouts/shim' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= render "layouts/shim" %>
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <%= render "layouts/header" %>
     <div class="container mt-3">
       <div class="content-wrapper">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
         <%= yield %>
       </div>
-      <%= render 'layouts/footer' %>
+      <%= render "layouts/footer" %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
