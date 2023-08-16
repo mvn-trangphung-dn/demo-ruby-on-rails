@@ -53,6 +53,11 @@ p {
     padding: 0 15px;
     margin-bottom: 10px;
   }
+  .dropdown-menu {
+    li {
+      color: $light-gray;
+    }
+  }
 }
 
 /* content */
@@ -168,7 +173,7 @@ input {
   height: 36px;
 }
 
-.form-sign-up {
+.form-sign-up, .form-log-in {
   display: flex;
   justify-content: center;
   label {
@@ -189,5 +194,27 @@ input {
   @extend .has-error !optional;
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.remember-content {
+  display: flex;
+  align-items: center;
+  input {
+    margin-bottom: 0;
   }
 }
