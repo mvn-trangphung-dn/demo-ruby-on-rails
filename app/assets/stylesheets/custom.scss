@@ -173,7 +173,7 @@ input {
   height: 36px;
 }
 
-.form-sign-up, .form-log-in {
+.form-sign-up, .form-log-in, .form-update-user {
   display: flex;
   justify-content: center;
   label {
@@ -218,3 +218,50 @@ input {
     margin-bottom: 0;
   }
 }
+
+/* Users index */
+.users {
+  list-style: none;
+  margin: 0;
+  img {
+    height: 30px;
+    border-radius: 50%;
+  }
+  thead {
+    span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  td {
+    vertical-align: middle;
+  }
+}
+
+
+/* Paginate*/
+.pagination {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    color: #0d6efd;
+    border-collapse: collapse;
+  }
+  li {
+    a {
+      &:hover, &:focus {
+        background-color: #0d6efd;
+        color: #fff;
+      }
+    }
+  }
+  li.active > a {
+    background-color: #0d6efd;
+    color: #fff;
+  }
+}
+
+
