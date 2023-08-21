@@ -1,14 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>All Users</h1>
 
-<div id="users">
+<div class="users">
   <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Action</th>
+        <th scope="col"><span>Avatar</span></th>
+        <th scope="col"><span>Name</span></th>
+        <th scope="col"><span>Email</span></th>
+        <th scope="col"><span>Action</span></th>
+        <% if current_user.admin? %>
+          <th scope="col"><span>Delete</span></th>
+        <% end %>
       </tr>
     </thead>
     <tbody>
@@ -20,5 +24,6 @@
     </tbody>
   </table>
 </div>
+<%= will_paginate %>
 
-<%= link_to "New user", new_user_path %>
+<%# <%= link_to "New user", new_user_path %>
