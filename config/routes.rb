@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'passwordresets/new'
+  get 'passwordresets/edit'
   get 'sessions/new'
   get 'user/new'
   get "static_pages/home"
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :microposts
   resources :users
+  resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
