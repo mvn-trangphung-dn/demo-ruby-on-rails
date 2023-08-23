@@ -173,7 +173,7 @@ input {
   height: 36px;
 }
 
-.form-sign-up, .form-log-in, .form-update-user, .form-password_reset, .form-reset-password {
+.form-sign-up, .form-log-in, .form-update-user, .form-password_reset, .form-reset-password, .form-micropost {
   display: flex;
   justify-content: center;
   label {
@@ -264,4 +264,64 @@ input {
   }
 }
 
+.m-t-sm {
+  margin-top: 7px;
+}
 
+.list-micropost {
+  .title-header {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .timestamp {
+    font-size: 10px;
+    font-style: italic;
+  }
+}
+
+/* microposts */
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    // margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+      width: 300px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    height: 30px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
